@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'IranYekan';
+    src: url(../fonts/IRANYekanWebMedium.woff);
+}
+
+body {
+    font-family: 'IranYekan';
+    direction: rtl;
+    text-align: right;
+}
+
+/*  table  */ 
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #6b7280;
+}
+
+th, td {
+    padding: 10px;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+select {
+    border-radius: 6px;
+    border-color: rgb(209, 213, 219);
+}
+
+input[type='checkbox']{
+ border-radius: 3px;
+}
+
+.swal-button--ok {
+    background-color: #E74C3C;
+}
+
+.swal-button--ok:hover {
+    background-color: #CB4335 !important;
+}
+
+.swal-button--confirm {
+    background-color: #27ae60 !important;
+}
+
+.swal-button--confirm:hover {
+    background-color: #2ecc71 !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 42px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: 42px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    top: 8px;
+}
