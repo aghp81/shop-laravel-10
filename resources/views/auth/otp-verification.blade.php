@@ -12,12 +12,12 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('otp.generate') }}">
+        <form method="POST" action="{{ route('login') }}">
             @csrf
 
             <div>
-                <x-label for="otp" value="{{ __('Mobile Number') }}" />
-                <x-input id="otp" class="block mt-1 w-full" type="text" name="otp" :value="old('otp')" required autofocus autocomplete="otp" placeholder="شماره موبایل خود را وارد کنید" />
+                <x-label for="mobile_no" value="{{ __('OTP') }}" />
+                <x-input id="mobile_no" class="block mt-1 w-full" type="text" name="mobile_no" :value="old('mobile_no')" required autofocus autocomplete="mobile_no" placeholder="پسورد یکبار مصرف را وارد کنید" />
             </div>
 
             
@@ -32,7 +32,7 @@
                 @endif
 
                 <x-button class="ml-4">
-                    {{ __('Generate OTP') }}
+                    {{ __('Login') }}
                 </x-button>
             </div>
             
