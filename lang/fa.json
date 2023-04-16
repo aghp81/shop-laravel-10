@@ -87,5 +87,6 @@
     "Mobile_no": "شماره موبایل",
     "Mobile Number": "شماره موبایل",
     "Login With Email": "ورود با ایمیل",
-    "Login With OTP": "ورود با شماره موبایل"
+    "Login With OTP": "ورود با شماره موبایل",
+    "Generate OTP": "دریافت رمز یکبار مصرف"
 }

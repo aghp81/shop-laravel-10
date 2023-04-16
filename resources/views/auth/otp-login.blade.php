@@ -17,7 +17,7 @@
 
             <div>
                 <x-label for="mobile_no" value="{{ __('Mobile Number') }}" />
-                <x-input id="mobile_no" class="block mt-1 w-full" type="text" name="mobile_no" :value="old('mobile_no')" required autofocus autocomplete="mobile_no" />
+                <x-input id="mobile_no" class="block mt-1 w-full" type="text" name="mobile_no" :value="old('mobile_no')" required autofocus autocomplete="mobile_no" placeholder="شماره موبایل خود را وارد کنید" />
             </div>
 
             
@@ -32,7 +32,7 @@
                 @endif
 
                 <x-button class="ml-4">
-                    {{ __('Log in') }}
+                    {{ __('Generate OTP') }}
                 </x-button>
             </div>
             <!--gmail login-->
