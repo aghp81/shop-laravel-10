@@ -35,6 +35,7 @@ Route::get('callback/google', 'App\Http\Controllers\Auth\GoogleSocialiteControll
 
 
 // otp mobile number
-
-Route::get('/otp/login', 'App\Http\Controllers\AuthOtpController@login')->name('otp.login');
-
+Route::controller(App\Http\Controllers\AuthOtpController::class)->group(function () {
+    Route::get('/otp/login', 'App\Http\Controllers\AuthOtpController@login')->name('otp.login');
+Route::post('/otp/generate', 'App\Http\Controllers\AuthOtpController@generate')->name('otp.generate');
+});
