@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('verification_codes', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id');
+            $table->string('otp');
+            $table->timestamps('expire_at');
             $table->timestamps();
         });
     }
