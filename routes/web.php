@@ -29,5 +29,12 @@ Route::middleware([
     })->name('dashboard');
 });
 
+// login with Google Acount
 Route::get('auth/google', 'App\Http\Controllers\Auth\GoogleSocialiteController@redirectToGoogle');
 Route::get('callback/google', 'App\Http\Controllers\Auth\GoogleSocialiteController@handleCallback');
+
+
+// otp mobile number
+Route::Controller(AuthOtpController::class)->group(function(){
+    Route::get('/otp/login', 'login')->name('otp.login');
+});
