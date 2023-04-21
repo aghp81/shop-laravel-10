@@ -15,7 +15,19 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    <!-- اگر کاربری که لاگین کرده ادمین است مدیریت فروشند ها را می بیند -->
+                    @admin
+
+                        <x-jet-nav-link href="{{ route('shop.index') }}" :active="request()->routeIs('shop.index')">
+                            {{ __('Sellers Admin') }} <!-- مدیریت فروشنده ها -->
+                        </x-jet-nav-link>
+
+                    @endadmin
+                    
                 </div>
+
+                
                 
             </div>
 
@@ -99,7 +111,7 @@
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
+                            <x-dropdown-link class="text-right" href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
@@ -115,7 +127,7 @@
                             <form method="POST" class="text-right" action="{{ route('logout') }}" x-data>
                                 @csrf
 
-                                <x-dropdown-link href="{{ route('logout') }}"
+                                <x-dropdown-link class="text-right" href="{{ route('logout') }}"
                                          @click.prevent="$root.submit();">
                                     {{ __('Log Out') }}
                                 </x-dropdown-link>
