@@ -15,6 +15,7 @@ use App\Http\Controllers\Auth\GoogleSocialiteController;
 |
 */
 
+//default laravel routes
 Route::get('/', function () {
     return view('welcome');
 });
@@ -41,3 +42,7 @@ Route::controller(App\Http\Controllers\AuthOtpController::class)->group(function
     Route::get('otp/verification/{user_id}', 'verification')->name('otp.verification');
     Route::post('otp/login', 'loginWithOtp')->name('otp.getlogin');
 });
+
+// admin(dashboard) routes
+    // shop resource route
+Route::resource('shop', 'ShopController')->except('show');
