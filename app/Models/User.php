@@ -31,7 +31,8 @@ class User extends Authenticatable
         'role',
         'google_id',
         'social_id',
-        'social_type'
+        'social_type',
+        'email_verified_at',
     ];
 
     /**
