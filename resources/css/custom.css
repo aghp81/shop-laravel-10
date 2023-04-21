@@ -3,6 +3,11 @@
     src: url(../fonts/IRANYekanWebMedium.woff);
 }
 
+*{
+    direction: rtl;
+}
+
+
 body {
     font-family: 'IranYekan';
     direction: rtl;
