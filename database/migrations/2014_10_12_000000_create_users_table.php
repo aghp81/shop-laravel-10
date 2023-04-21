@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
 
 return new class extends Migration
 {
@@ -23,6 +24,16 @@ return new class extends Migration
             $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();
         });
+
+        // add user with admin role to database
+        User::create([
+            'name' => 'aghp81',
+            'email' => 'aghp81@gmail.com',
+            'role' => 'admin',
+            'email_verified_at' => now(),
+            'password' => bcrypt('2460258402abc'),
+        ]);
+        
     }
 
     /**
