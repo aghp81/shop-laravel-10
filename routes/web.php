@@ -45,4 +45,4 @@ Route::controller(App\Http\Controllers\AuthOtpController::class)->group(function
 
 // admin(dashboard) routes
     // shop resource route
-Route::resource('shop', 'ShopController')->except('show');
+Route::resource('shop', ShopController::class)->except('show');
