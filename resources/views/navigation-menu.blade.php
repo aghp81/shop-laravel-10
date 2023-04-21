@@ -19,12 +19,12 @@
                     <!-- اگر کاربری که لاگین کرده ادمین است مدیریت فروشند ها را می بیند -->
                     @admin
 
-                        <x-jet-nav-link href="{{ route('shop.index') }}" :active="request()->routeIs('shop.index')">
+                        <x-nav-link href="{{ route('shop.index') }}" :active="request()->routeIs('shop.index')">
                             {{ __('Sellers Admin') }} <!-- مدیریت فروشنده ها -->
-                        </x-jet-nav-link>
+                        </x-nav-link>
 
                     @endadmin
-                    
+
                 </div>
 
                 
