@@ -12,7 +12,7 @@ class ShopController extends Controller
         // برای پیاده سازی میدلور CheckAdmin
         public function __construct()
         {
-            // $this->middleware(['auth', 'admin']);
+             $this->middleware(['auth', 'admin']);
             // $this->middleware(['auth', 'admin'])->except(['show', 'index']);// خارج کردن دو بخش از میدلور. همه کاربران می توانند ببینند.
            // $this->middleware(['auth', 'admin'])->only(['show', 'index']);// فقط این دو بخش در میدلور ادمین باشند و سایر بخش ها را همه بتوانند ببینند.
           // $this->middleware('auth');
@@ -43,7 +43,7 @@ class ShopController extends Controller
                 'title' => 'required|between:3,100|string|unique:shops,title', // مشخص میکنیم در چه جدولی و چه ستونی یونیک باشد.
                 'first_name' => 'required|string',
                 'last_name' => 'required|string',
-                'telephone' => 'required|string|size:11',
+                'telephone' => 'required|regex:/(09)[0-9]{9}/|digits:11|numeric|unique:users,mobile_no',
                 'email' => 'required|email|unique:users,email',
                 'username' => 'required|unique:users,name',// مشخص میکنیم در چه جدولی و چه ستونی یونیک باشد.
                 'address' => 'nullable',
