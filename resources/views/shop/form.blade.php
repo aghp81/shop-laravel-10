@@ -8,6 +8,7 @@
     <!-- نمایش ولیدیشن ها -->
     <x-validation-errors class="m-4 mb-4 text-right" />
 
+    <!-- $slot app.blade -->
     <!-- اگر شاپ آی دی داشت هدایت شود به آپدیت در غیر این صورت هدایت شود به استور -->
     <form class="grid grid-cols-3 gap-4" action="{{$shop->id ? route('shop.update', $shop->id) : route('shop.store') }}" method="POST">
 
@@ -36,7 +37,7 @@
 
         <div>
             <x-label class="m-4" for="telephone" value="{{ __('telephone') }}" />
-            <x-input class="m-4" id="telephone" class="block mt-3 w-full" type="text" name="telephone" :value="$shop->telephone ?? old('telephone')" required />
+            <x-input class="m-4" id="telephone" class="block mt-3 w-full" type="text" name="telephone" :value="$shop->telephone ?? old('telephone')" required placeholder="09XXXXXXXXX" />
         </div>
 
         
