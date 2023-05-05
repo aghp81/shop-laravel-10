@@ -6,7 +6,11 @@
     </x-slot>
 
     <!-- نمایش ولیدیشن ها -->
-    <x-validation-errors class="m-4 mb-4 text-right" />
+    @if($errors->any())
+        <x-validation-errors class="m-4 mb-4 text-right" />
+    @endif
+
+    
 
     <!-- $slot app.blade -->
     <!-- اگر شاپ آی دی داشت هدایت شود به آپدیت در غیر این صورت هدایت شود به استور -->
