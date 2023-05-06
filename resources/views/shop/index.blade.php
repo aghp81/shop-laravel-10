@@ -15,11 +15,13 @@
     </div>
 
     <!-- نمایش پیام موفقیت ثبت فروشگاه -->
+    @if($message = session('meesage'))
     <div class="bg-green-400 overflow-hidden text-gray-50 shadow-xl sm:rounded-lg p-4">
-        @if($message = session('meesage'))
+        
             {{ $message }}
-        @endif
+        
     </div>
+    @endif
     
 
     

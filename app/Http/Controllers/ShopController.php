@@ -56,6 +56,7 @@ class ShopController extends Controller
             $user = User::create([
                 'name' => $request->username,
                 'email' => $request->email,
+                'mobile_no' => $request->telephone,
                 'role' => 'shop',
                 'email_verified_at' => now(),
                 'password' => bcrypt($randomPass), // پسورد را رندم می سازد.
