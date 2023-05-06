@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Shop;
+use App\Notifications\NewShop;
 use Illuminate\Http\Request;
+
 
 
 class ShopController extends Controller
