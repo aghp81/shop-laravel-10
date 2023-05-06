@@ -36,9 +36,26 @@
             <main>
 
                 <div class="py-12">
-                    <div class="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
-                        <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-4">
-                            {{ $slot }}
+                <div class="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
+                        
+                        <!-- نمایش ارورهای ولیدیشن -->
+                        @if($errors->any())
+                            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-4 mb-6">
+                                <x-validation-errors />
+                            </div>
+                        @endif
+                        
+                        
+                        <!-- نمایش پیام های موفقیت -->
+                        @if($message = session('message'))
+                            <div class="text-gray-50 bg-green-400 overflow-hidden shadow-xl sm:rounded-lg p-4 mb-6">
+                                {{ $message }}
+                            </div>
+                        @endif
+                    
+                    
+                    <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-4">
+                                {{ $slot }}
                         </div>
                     </div>
                 </div>
