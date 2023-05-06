@@ -15,12 +15,11 @@
     </div>
 
     <!-- نمایش پیام موفقیت ثبت فروشگاه -->
-    @if($message = session('meesage'))
-    <div class="bg-green-400 overflow-hidden text-gray-50 shadow-xl sm:rounded-lg p-4">
-        
+    <!-- نمایش پیام های موفقیت -->
+    @if($message = session('message'))
+        <div class="text-gray-50 bg-green-400 overflow-hidden shadow-xl sm:rounded-lg p-4 mb-6">
             {{ $message }}
-        
-    </div>
+        </div>
     @endif
     
 
