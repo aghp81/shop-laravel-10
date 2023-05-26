@@ -14,7 +14,7 @@ $(document).ready(function() {
       btn.addEventListener('click', function () {
           // console.log('salam' + i);
   
-          //swal
+          //swal alert
           swal({
               title: "آیا مطمئن هستید؟",
               text: "در صورت پاک کردن امکان بازیابی اطلاعات وجود ندارد!",
