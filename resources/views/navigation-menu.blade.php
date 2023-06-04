@@ -29,7 +29,7 @@
                         </x-nav-link>
 
                         <x-nav-link href="{{ route('shop.index') }}" :active="request()->routeIs('shop.index')">
-                            {{ __('Section Management') }} <!-- مدیریت فروشنده ها -->
+                            {{ __('Category Management') }} <!-- مدیریت فروشنده ها -->
                         </x-nav-link>
                     @endadmin
                     <!-- @endif -->

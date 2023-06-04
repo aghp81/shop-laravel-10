@@ -90,5 +90,7 @@
     "Login With OTP": "ورود با شماره موبایل",
     "Generate OTP": "دریافت رمز یکبار مصرف",
     "OTP Login": "ورود با شماره موبایل",
-    "Login": "ورود"
+    "Login": "ورود",
+    "Section Management": "مدیریت بخش ها",
+    "Category Management": "مدیریت دسته بندی ها"
 }
