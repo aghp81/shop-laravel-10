@@ -46,3 +46,6 @@ Route::controller(App\Http\Controllers\AuthOtpController::class)->group(function
 // admin(dashboard) routes
     // shop resource route
 Route::resource('shop', ShopController::class)->except('show');
+    //sections
+Route::get('sections', [App\Http\Controllers\Admin\SectionController::class, 'sections'])->name('sections.sections');
+
