@@ -18,17 +18,24 @@
 
                     <!-- اگر کاربری که لاگین کرده ادمین است مدیریت فروشند ها را می بیند -->
                     
-
+                    <!-- @if(auth()->user()->role == 'admin') -->
+                    @admin
                         <x-nav-link href="{{ route('shop.index') }}" :active="request()->routeIs('shop.index')">
                             {{ __('Sellers Admin') }} <!-- مدیریت فروشنده ها -->
                         </x-nav-link>
 
-                    
+                        <x-nav-link href="{{ route('shop.index') }}" :active="request()->routeIs('shop.index')">
+                            {{ __('Section Management') }} <!-- مدیریت فروشنده ها -->
+                        </x-nav-link>
+
+                        <x-nav-link href="{{ route('shop.index') }}" :active="request()->routeIs('shop.index')">
+                            {{ __('Section Management') }} <!-- مدیریت فروشنده ها -->
+                        </x-nav-link>
+                    @endadmin
+                    <!-- @endif -->
 
                 </div>
 
-                
-                
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
