@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('section', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->tinyInteger('status'); // برای فعال یا غیر فعال کردن سکشن
             $table->timestamps();
         });
     }
