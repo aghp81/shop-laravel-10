@@ -24,8 +24,8 @@
                             {{ __('Sellers Admin') }} <!-- مدیریت فروشنده ها -->
                         </x-nav-link>
 
-                        <x-nav-link href="{{ route('shop.index') }}" :active="request()->routeIs('shop.index')">
-                            {{ __('Section Management') }} <!-- مدیریت فروشنده ها -->
+                        <x-nav-link href="{{ route('sections.sections') }}" :active="request()->routeIs('sections.sections')">
+                            {{ __('Section Management') }} <!-- مدیریت بخش ها -->
                         </x-nav-link>
 
                         <x-nav-link href="{{ route('shop.index') }}" :active="request()->routeIs('shop.index')">
